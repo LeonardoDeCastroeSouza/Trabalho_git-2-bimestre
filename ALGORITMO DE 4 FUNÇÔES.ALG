@@ -9,8 +9,14 @@ inicio
    retorne n1 / n2
 fimfuncao
 
+funcao soma (n1, n2 : real) : real
+var
+inicio
+   retorne n1 + n2
+fimfuncao
 Inicio
 
 
 
 Fimalgoritmo
+
