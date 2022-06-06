@@ -5,16 +5,21 @@ algoritmo "PRIMO"
 // Seção de Declarações
 var
 numero : vetor [0..9] de inteiro
-
 procedimento primo
-
 var
 x, i:inteiro
-
 inicio
+numero[0] <- 3
+numero[1] <- 4
+numero[2] <- 7
+numero[3] <- 11
+numero[4] <- 14
+numero[5] <- 99
+numero[6] <- 10
+numero[7] <- 21
+numero[8] <- 19
+numero[9] <- 57
 para x <- 0 ate 9 faca
-escreval("Insira Número: ")
-leia(numero[x])
    se (numero[x] mod 2 <> 0) e (numero[x] <> 1) ou (numero[x] = 2) entao
       se (numero[x] mod 3 <> 0) e (numero[x] <> 1) ou (numero[x] = 3) entao
          se (numero[x] mod 5 <> 0) e (numero[x] <> 1) ou (numero[x] = 5) entao
@@ -32,9 +37,9 @@ leia(numero[x])
       i <- -1
    fimse
    se (i <> -1) entao
-      escreval((x+1):2,"º ", numero[x], " é primo")
+      escreval((x+1):2,"º ", numero[x], ": é primo")
    senao
-      escreval((x+1):2,"º ", numero[x], " não é primo")
+      escreval((x+1):2,"º ", numero[x], ": não é primo")
    fimse
    i<-0
 fimpara
@@ -43,4 +48,5 @@ fimprocedimento
 
 inicio
 primo
+// Seção de Comandos
 fimalgoritmo
