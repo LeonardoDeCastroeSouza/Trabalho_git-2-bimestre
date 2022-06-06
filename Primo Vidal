@@ -1,0 +1,46 @@
+algoritmo "PRIMO"
+// Função : Identificar numero primo
+// Autor : Vidal Javier Reis Cabrera
+// Data : 06/06/2022
+// Seção de Declarações
+var
+numero : vetor [0..9] de inteiro
+
+procedimento primo
+
+var
+x, i:inteiro
+
+inicio
+para x <- 0 ate 9 faca
+escreval("Insira Número: ")
+leia(numero[x])
+   se (numero[x] mod 2 <> 0) e (numero[x] <> 1) ou (numero[x] = 2) entao
+      se (numero[x] mod 3 <> 0) e (numero[x] <> 1) ou (numero[x] = 3) entao
+         se (numero[x] mod 5 <> 0) e (numero[x] <> 1) ou (numero[x] = 5) entao
+            se (numero[x] mod 7 <> 0) e (numero[x] <> 1) ou (numero[x] = 7) entao
+            senao
+               i <- -1
+            fimse
+         senao
+            i <- -1
+         fimse
+      senao
+         i <- -1
+      fimse
+   senao
+      i <- -1
+   fimse
+   se (i <> -1) entao
+      escreval((x+1):2,"º ", numero[x], " é primo")
+   senao
+      escreval((x+1):2,"º ", numero[x], " não é primo")
+   fimse
+   i<-0
+fimpara
+escreval()
+fimprocedimento
+
+inicio
+primo
+fimalgoritmo
